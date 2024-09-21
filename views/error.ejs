@@ -1,0 +1,16 @@
+<% layout("/layouts/boilerplate")-%>
+<style>
+  .error_upper{
+    width: screen !important;
+  }
+  .error_inner{
+    width: 50% !important;
+  }
+</style>
+<body>
+    <div class="error_upper">
+        <div class="alert alert-danger error_inner mt-4" role="alert">
+            <p><%= message %></p>
+          </div>
+    </div>
+</body>

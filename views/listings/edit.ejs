@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit List</title>
+</head> -->
+<% layout("/layouts/boilerplate")-%>
+    <body>
+        <div class="row newlist-body-upper">
+            <div class="col-8 offset-2">
+                <h3>Edit your details</h3>
+                <form method="post" action="http://localhost:8080/listings/<%= list._id %>?_method=PATCH" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label" for="title">Title : </label>
+                        <input placeholder="" type="text" name="title" value="<%= list.title %>" id="title"
+                            class="form-control"></input>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Description : </label>
+                        <textarea placeholder="" type="text" name="description" rows="3" cols="20" id="description"
+                            class="form-control"><%= list.description %></textarea>
+                    </div>
+                    <div class="mb-3">
+                        Original image : <br>
+                        <img src="<%= mini_pixel_image %>" style="height: 8rem;" class="mt-2">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="price">Upload new image : </label>
+                        <input placeholder="Enter image url/link" type="file" name="listing[image]" class="form-control"
+                            id="price">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label class="form-label" for="price">Price : </label>
+                            <input placeholder="" value="<%= list.price %>" type="text" name="price" id="price"
+                                class="form-control"></input>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label class="form-label" for="country">Country : </label>
+                            <input placeholder="" value="<%= list.country %>" type="text" name="country" id="country"
+                                class="form-control"></input>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="location">Location : </label>
+                        <input placeholder="" value="<%= list.location %>" type="text" name="location" id="location"
+                            class="form-control"></input>
+                    </div>
+                    <button class="btn btn-danger">Update</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <!-- </html> -->

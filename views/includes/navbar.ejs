@@ -1,0 +1,155 @@
+<style>
+  .search-btn {
+    background-color: red;
+    border-radius: 25px;
+  }
+
+  .search-btn:hover {
+    background-color: red;
+  }
+
+  .search-inp {
+    border-radius: 25px;
+  }
+
+  .navbar {
+    z-index: 7;
+    background-color: rgb(255, 228, 223) !important;
+    position: sticky;
+    top: 0px;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+  .link_at_large {
+    margin-right: 15px;
+  }
+  .navbar-collapse {
+    z-index: 7;
+    background-color: rgb(255, 228, 223) !important;
+    padding: 0px 5px 5px 5px !important;
+  }
+
+  .search-box {
+    margin-left: 170px !important;
+  }
+  .navbar_large_scr {
+    display: flex;
+    margin-left: 400px;
+  }
+
+  @media (max-width: 450px) {
+    .search-box {
+      margin-left: 0px !important;
+      margin-top: 10px;
+    }
+
+    .navbar-nav {
+      display: flex;
+      margin-top: 10px;
+    }
+    .navbar_large_scr {
+      display: none;
+    }
+    #filters{
+      padding: 0px !important;
+    }
+  }
+</style>
+
+<!-- Here is new bootstrap navbar -->
+
+<nav class="navbar navbar-expand-lg bg-red">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"
+      ><i class="fa-regular fa-compass"></i
+    ></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="nav-item lg:ml-9">
+        <a class="nav-link" href="/listings">Home</a>
+      </div>
+      <div class="search-box ml-lg-6">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2 search-inp"
+            type="search"
+            placeholder="Search Destination"
+            aria-label="Search"
+          />
+          <button class="btn search-btn" type="submit">Search</button>
+        </form>
+      </div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <a class="nav-link mr-3" href="/listings/new">Add listing</a>
+        <% if (!currUser) { %>
+        <a class="nav-link mr-3" aria-current="page" href="/User/signUp"
+          ><b>SignUp</b></a
+        >
+        <a class="nav-link mr-3" href="/User/login"><b>login</b></a>
+        <% } %> <% if (currUser) { %>
+        <a class="nav-link mr-3" href="/User/logout"><b>logOut</b></a>
+        <% } %>
+      </ul>
+      <ul class="navbar_large_scr me-auto mb-2 mb-lg-0">
+        <a class="nav-link link_at_large" href="/listings/new">Add listing</a>
+        <% if (!currUser) { %>
+        <a
+          class="nav-link link_at_large"
+          aria-current="page"
+          href="/User/signUp"
+          ><b>SignUp</b></a
+        >
+        <a class="nav-link link_at_large" href="/User/login"><b>login</b></a>
+        <% } %> <% if (currUser) { %>
+        <a class="nav-link link_at_large" href="/User/logout"><b>logOut</b></a>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Here is the filter part of website -->
+ <div id="filters" >
+  <a href="http://localhost:8080/listings/parti/Mountain">
+    <div class="filter">
+      <div><i class="fa-solid fa-mountain-sun"></i></div>
+      <p>Mountains</p>
+    </div>
+  </a>
+  <a href="http://localhost:8080/listings/parti/Farm">
+    <div class="filter">
+      <div><i class="fa-solid fa-cow"></i></div>
+      <p>Farm</p>
+    </div>
+  </a>
+  <a href="http://localhost:8080/listings/parti/Lake">
+    <div class="filter">
+      <div><i class="fa-solid fa-water"></i></div>
+      <p>Lake</p>
+    </div>
+  </a>
+  <a href="http://localhost:8080/listings/parti/Island">
+    <div class="filter">
+      <div><i class="fa-solid fa-tree"></i></div>
+      <p>Island</p>
+    </div>
+  </a>
+  <a href="http://localhost:8080/listings/parti/Top Cities">
+    <div class="filter">
+      <div><i class="fa-solid fa-city"></i></div>
+      <p>Top Cities</p>
+    </div>
+  </a>
+</div> 

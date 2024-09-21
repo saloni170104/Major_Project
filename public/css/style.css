@@ -1,0 +1,181 @@
+.navbar{
+    height: 5rem;
+    background: white;
+}
+
+.fa-compass{
+    color: red;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222 !important;
+    font-weight: 500 !important;
+}
+
+footer{
+    height: 7rem;
+    background-color: rgb(186, 185, 185);
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 10px 0px 10px 0px ; */
+}
+.f-info-social{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-info-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-brand{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-social i{
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.f-info-links a{
+    margin-right: 1rem;
+    color: #222222;
+    text-decoration: none;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+
+/* Cards stylling */
+
+.card{
+ border :none !important;
+ margin-bottom: 2.5rem;
+ 
+}
+
+.card-img-top{
+
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 10px 0px 10px 10px  !important;
+}
+
+.listing-img{
+    text-decoration: none;
+}
+
+.card:hover{
+   background-color: white;
+}
+
+/* Card image overlay */
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.newlist-body-upper{
+
+    margin: 30px 0px 30px 0px !important;
+}
+
+.btn{
+    padding: 2px 20px 2px 20px !important;
+    /* margin-top: 10px; */
+    font-weight: 500;
+    color: white !important;
+    /* background-color: red !important; */
+}
+
+.edit-option{
+        text-decoration: none;
+        color: white !important;
+}
+
+.show-edit-box{
+    display: flex;
+    margin-top: 5px;
+}
+
+.show-edit-box button{
+    margin-right: 8px !important;
+}
+
+.listing-card{
+    border: 1px solid !important;
+    background-color: rgb(255, 240, 237) !important;
+}
+
+/* Filters stylling */
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-left: 50px; */
+    padding-left: 50px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 55px;
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
+  }
+
+  #filters a{
+    text-decoration: none;
+    /* color: red; */
+    color: black;
+  }
+.filter{
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.filter:hover{
+    opacity: 1;
+}
+
+.filter p:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+@media (max-width: 450px){
+    .listing-img{
+        text-decoration: none;
+        padding: 0px !important;
+        margin-top: 10px;
+        padding: 0px 10px 0px 10px;
+    }
+    .card-img-top{
+        padding: 0px 10px 0px 10px  !important;
+        border-radius: 13px !important;
+    }
+    .single-list{
+        padding: 0px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

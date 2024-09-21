@@ -1,0 +1,78 @@
+<% layout("/layouts/boilerplate")-%>
+<style>
+    .newlist-body-upper{
+      width:screen !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .newlist-body{
+      width: 50% !important;
+      border-radius: 10px;
+    }
+  
+    @media(max-width : 450px){
+      .newlist-body{
+      width: 100% !important;
+      padding: 20px 20px 20px 20px !important;
+    }
+    }
+  </style>
+
+    <body>
+        <div class="newlist-body-upper  ">
+            <div class="newlist-body ">
+                <h3>Add New List</h3>
+                <form method="post" action="/listings" novalidate class="needs-validation"
+                    enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label" for="title">Title : </label>
+                        <input placeholder="Write here" type="text" name="title" class="form-control" id="title"
+                            required>
+                        </input>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Description : </label>
+                        <textarea placeholder="write here" type="text" name="description" id="description"
+                            class="form-control" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="price">Upload image : </label>
+                        <input placeholder="Enter image url/link" type="file" name="listing[image]" class="form-control"
+                            id="price">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label class="form-label" for="price">Price : </label>
+                            <input placeholder="Enter price" type="text" name="price" class="form-control" id="price"
+                                required>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label class="form-label" for="country">Country : </label>
+                            <input placeholder="Enter country`" type="text" name="country" class="form-control"
+                                id="country" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="location">Location : </label>
+                        <input placeholder="Enter location" type="text" name="location" class="form-control"
+                            id="location" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="mb-2">Which Options mention your place : </label>
+                        <select class="form-select" aria-label="Default select example" class="mt-3" required name="category">
+                            <option selected>Open this select menu</option>
+                            <option value="Mountain">Mountain</option>
+                            <option value="Farm">Farm</option>
+                            <option value="Island">Island</option>
+                            <option value="Camping">Camping</option>
+                            <option value="Lake">Lake</option>
+                            <option value="Top Cities">Top Cities</option>
+                          </select>
+                    </div>
+                    <button class="btn btn-danger ">Add</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </body>

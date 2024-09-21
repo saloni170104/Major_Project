@@ -1,0 +1,77 @@
+
+<% layout("/layouts/boilerplate")-%>
+<style>
+  .login-upper{
+    width:screen !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-inner{
+    width: 50% !important;
+    border-radius: 10px;
+  }
+
+  @media(max-width : 450px){
+    .login-inner{
+    width: 100% !important;
+    padding: 20px 20px 20px 20px !important;
+  }
+  }
+</style>
+<body>
+  <div class="login-upper mt-5 mb-5">
+    <div class="login-inner shadow-lg px-5 py-4">
+      <h2 class="text-center mb-3">SignUp on Roam&Round</h2>
+      <form method="post" action="/User/signUp" novalidate class="needs-validation">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >User name :
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+            name="username"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            required
+            name="email"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            required
+            name="password"
+          />
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div> -->
+        <button type="submit" class="btn btn-primary mt-2">SignUp</button>
+      </form>
+    </div>
+  </div>
+</body>
+<!-- </html> -->
